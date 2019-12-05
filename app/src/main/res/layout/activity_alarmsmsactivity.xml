@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D3C3C"
+    tools:context=".SmsActivity.AlarmSmsActivity">
+
+
+    <EditText
+        android:id="@+id/sms_message"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:hint="@string/enter_message_here"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="8"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_to_call" />
+
+    <EditText
+        android:id="@+id/number_to_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number Phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_sms_activity" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="680dp"
+        android:background="#3F51B5"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="#C95A82"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TableLayout
+        android:id="@+id/table_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sms_message">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/happy_birthday"
+                android:layout_width="106dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#3D3C3C"
+                android:scaleType="centerCrop"
+                android:tint="#8AD11339"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="304dp" />
+
+            <ImageButton
+                android:id="@+id/weeding"
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#3D3C3C"
+                android:scaleType="centerCrop"
+                android:tint="#D1DA5A"
+                app:srcCompat="@android:drawable/ic_input_get"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="290dp" />
+
+            <ImageButton
+                android:id="@+id/like"
+                android:layout_width="87dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#3D3C3C"
+                android:scaleType="centerCrop"
+                android:tint="#19EB9B"
+                app:srcCompat="@android:drawable/sym_action_chat"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="289dp" />
+
+            <ImageButton
+                android:id="@+id/partner"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#3D3C3C"
+                android:scaleType="centerCrop"
+                android:tint="#54327BD5"
+                app:srcCompat="@android:drawable/ic_menu_myplaces"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="296dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/happy_birthday_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Happy Birthday"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                 />
+
+            <TextView
+                android:id="@+id/weeding_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weeding"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/like_info"
+                android:layout_width="100dp"
+                android:layout_height="21dp"
+                android:text="Like Friends"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/partner_info"
+                android:layout_width="100dp"
+                android:layout_height="21dp"
+                android:text="Jubilee Partners"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/name_sms_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button_contact"
+        android:layout_width="55dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/name_sms_activity"
+        app:layout_constraintTop_toTopOf="@+id/number_to_call"
+        app:srcCompat="@android:drawable/stat_sys_phone_call_forward" />
+
+    <ImageButton
+        android:id="@+id/message_icon"
+        android:layout_width="116dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#3D3C3C"
+        android:scaleType="centerCrop"
+        android:tint="#8D303F9F"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_button"
+        app:layout_constraintVertical_bias="0.915"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

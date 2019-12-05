@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D3C3C"
+    tools:context=".AlarmProfile.AlarmProfileActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="#3F51B5"
+        app:itemIconTint="#C95A82"
+        app:itemTextColor="#C95A82"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/update_text_history"
+        app:layout_constraintTop_toBottomOf="@+id/update_text_history"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:hint="@string/buttonTime"
+        android:text="@string/times"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/get_date"
+        app:layout_constraintStart_toStartOf="@+id/timeButton"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/get_time"
+        app:layout_constraintEnd_toEndOf="@+id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/timeTextView" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/ButtonDate"
+        android:text="@string/dates"
+
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeButton" />
+
+    <Button
+        android:id="@+id/alarm_history_off"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/stop_history"
+        app:layout_constraintBottom_toTopOf="@+id/update_text_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/update_text_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:text="@string/set_alarm_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="421dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="514dp"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/update_text_history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_delete"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#3F51B5"
+                android:tint="#FF0000"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+            <ImageButton
+                android:id="@+id/button_set"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="248dp"
+                android:backgroundTint="#3F51B5"
+                android:tint="#C92FAD00"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/history_name"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+
+            android:autofillHints=""
+            android:text="@string/history_name"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/sms_image_button"
+        android:layout_width="71dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="#3D3C3C"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_history_off"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_history_off"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

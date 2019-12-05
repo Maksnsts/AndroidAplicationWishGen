@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D3C3C"
+    tools:context=".AlarmHistoryActivity.AlarmHistoryActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="#3F51B5"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="#C95A82"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context="com.example.application.grocerylist.MainActivity">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="378dp"
+            android:layout_height="525dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/add_new_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:backgroundTint="#3D3C3C"
+        android:tint="#3F51B5"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:contentDescription="TODO" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
